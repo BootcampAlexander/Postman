@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "9a54540a-4d4b-4e9e-a007-c09a2043ac38",
+		"name": "B37_COFING_PAY_METHOD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15770076"
+	},
+	"item": [
+		{
+			"name": "GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7000/exchange/config-payment/all",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"exchange",
+						"config-payment",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"methodPaymentId\" : \"YANKI-PAYMENT-ID\",\r\n    \"numberAccount\" : \"934819535\",\r\n    \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7000/exchange/config-payment",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"exchange",
+						"config-payment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

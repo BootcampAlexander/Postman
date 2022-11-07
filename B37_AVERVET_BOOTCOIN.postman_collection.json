@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "84b2622e-42d5-42da-8bfa-a785e49cd35e",
+		"name": "B37_AVERVET_BOOTCOIN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15770076"
+	},
+	"item": [
+		{
+			"name": "CREATEPOST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nickname\":\"Bootcoin\",\r\n    \"amount\":\"100\",\r\n    \"maxAmount\":\"100\",\r\n    \"minAmount\":\"10\" , \r\n    \"walletId\": \"63696d011b0b3c7e467a44d5\",\r\n    \"methodPayment\":\"YANKI-PAYMENT-ID\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7000/ad/post",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"ad",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7000/ad/all",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"ad",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "request-purchase",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"advertId\" :\"63696fa00d60715c45b2f586\",\r\n    \"amount\" : 100,\r\n    \"methodPayment\" :\"TUN\",\r\n    \"buyerWalletId\" :\"\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7000/ad/request-purchase",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"ad",
+						"request-purchase"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "4ae17514-016d-4736-856e-6372ad1703ae",
+		"name": "B37_WALLET",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15770076"
+	},
+	"item": [
+		{
+			"name": "MOVEMENT",
+			"item": [
+				{
+					"name": "CREATE_TRANSACTION",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sourceNumberCell\" : \"98787847\",\r\n    \"targetNumberCell\" : \"986434107\",\r\n    \"amount\": \"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/wallet-transfer/exec",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"wallet-transfer",
+								"exec"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CREATE_one",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\": \"986434107\",\r\n    \"name\": \"Alexander\",\r\n    \"lastName\": \"BEJARANO\",\r\n    \"numberDocument\" : \"70150525\",\r\n    \"documentType\" : \"DNI\",\r\n    \"imei\":\"211556465654\",\r\n    \"email\": \"ALES.BEJARANO@GMAOIL.COM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/wallet/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"wallet",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE TOW",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\": \"934819535\",\r\n    \"name\": \"ANGEL\",\r\n    \"lastName\": \"ALVARADO\",\r\n    \"numberDocument\" : \"2323223\",\r\n    \"documentType\" : \"DNI\",\r\n    \"imei\":\"232323\",\r\n    \"email\": \"ALES.BEJARANO@GMAOIL.COM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/wallet/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"wallet",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\": \"986434107\",\r\n    \"name\": \"Alexnader\",\r\n    \"balance\" : \"0\",\r\n    \"lastName\": \"Bejarano\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/wallet/get/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"wallet",
+						"get",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/wallet/get/986434107",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"wallet",
+						"get",
+						"986434107"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "1e54e48c-26e4-4422-a751-a659a4d3da92",
+		"name": "B37_ACCOUNTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15770076"
+	},
+	"item": [
+		{
+			"name": "CREATE_ACOUNT SAVINGS_ACCOUNT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\" : \"123456789\",\r\n    \"balance\" :\"10000\",\r\n    \"coin\" :\"Soles\",\r\n    \"holderId\" :\"63696a33e2cc5f210ec47a59\",\r\n    \"productId\":\"63695f90a836e06affe2d6cc\",\r\n    \"typeAccount\":\"CURRENT_ACCOUNT\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7000/account/",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"account",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE_ACOUNT SAVINGS_ACCOUNT TWO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\" : \"457848748\",\r\n    \"balance\" :\"10000\",\r\n    \"coin\" :\"Soles\",\r\n    \"holderId\" :\"63696a69e2cc5f210ec47a5a\",\r\n    \"productId\":\"63695f90a836e06affe2d6cc\",\r\n    \"typeAccount\":\"CURRENT_ACCOUNT\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7000/account/",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"account",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEPOSIT_ACOUNT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\":\"200\",\r\n    \"accountNumber\": \"123456789\",\r\n    \"operation\":\"Deposito\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7000/current-account/deposit",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"current-account",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WITHDRAW_ACOUNT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\":\"20\",\r\n    \"accountNumber\": \"457848748\",\r\n    \"operation\":\"comida\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/current-account/withdraw",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"current-account",
+						"withdraw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE_ACOUNT_ BY CUSTOMER",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\":\"0001\",\r\n    \"holderId\": \"63540fcf347df714ffd561d1\",\r\n    \"productId\": \"6355c1e18f512814c497126a\",\r\n    \"coin\":\"Soles\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7000/account/customer/63696a69e2cc5f210ec47a5a",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"account",
+						"customer",
+						"63696a69e2cc5f210ec47a5a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

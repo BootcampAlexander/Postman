@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "74c12514-93c4-4d95-8fe4-0806ed3126b4",
+		"name": "B37_CREDIT_CARD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15770076"
+	},
+	"item": [
+		{
+			"name": "CREATE_CREDIT_CARD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idCustomer\":\"635999cc2b9bcf1d7150bd11\",\r\n    \"idProduct\":\"635999e49fe61b1ba02dee86\",\r\n    \"limitAmount\":\"1000\",\r\n    \"closingDay\":\"29\",\r\n    \"dayOfPay\":\"5\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/credit/card/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"credit",
+						"card",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE_CREDIT_CARD_CHARGE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idCredit\":\"635bdedf466e1d418b68746c\",\r\n    \"description\":\"New \",\r\n    \"amount\" : 500,\r\n    \"type\":\"CHARGE\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/credit/card/charge/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"credit",
+						"card",
+						"charge",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE_CREDIT_CARD_PAYED",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idCredit\":\"635bdedf466e1d418b68746c\",\r\n    \"description\":\"PAGO\",\r\n    \"amount\" : 500,\r\n    \"type\":\"PAYMENT\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/credit/card/payment/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"credit",
+						"card",
+						"payment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE_CREDIT_CARD ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/credit/card/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"credit",
+						"card",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BY PRODUCTS BY DATES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/credit/card/product/?startDate=01/01/2022&endDate=19/12/2022&idProduct=635999e49fe61b1ba02dee86",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"credit",
+						"card",
+						"product",
+						""
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "01/01/2022"
+						},
+						{
+							"key": "endDate",
+							"value": "19/12/2022"
+						},
+						{
+							"key": "idProduct",
+							"value": "635999e49fe61b1ba02dee86"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE_CREDIT_CARD_HAVE_DESBS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/credit/card/customer-debts/635999cc2b9bcf1d7150bd11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"credit",
+						"card",
+						"customer-debts",
+						"635999cc2b9bcf1d7150bd11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_MOVIMIENTOS_UTLIMOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/credit/card/transaction-lasted/635bdedf466e1d418b68746c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"credit",
+						"card",
+						"transaction-lasted",
+						"635bdedf466e1d418b68746c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

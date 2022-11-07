@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "b0a56f87-b29a-4d12-a867-238050e63c84",
+		"name": "B37_CREDIT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15770076"
+	},
+	"item": [
+		{
+			"name": "CREATE_CREDIT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idCustomer\":\"635999cc2b9bcf1d7150bd11\",\r\n    \"idProduct\":\"635a95662453d21201e3ce3c\",\r\n    \"amountCredit\":\"12000\",\r\n    \"dayOfPay\" :\"5\",\r\n    \"dues\" : \"15\",\r\n    \"intervalDues\": \"1\",\r\n    \"interestAmount\": \"1000\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/credit/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"credit",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREDIT_PAYMET",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idCredit\":\"635abf368e3b7b4c1ae21889\",\r\n    \"nroDues\":\"2\",\r\n    \"amount\":\"866.6667\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/credit/payment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"credit",
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BY PRODUCTS BY DATES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/credit/product?startDate=01/01/2022&endDate=19/12/2022&idProduct=635a95662453d21201e3ce3c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"credit",
+						"product"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "01/01/2022"
+						},
+						{
+							"key": "endDate",
+							"value": "19/12/2022"
+						},
+						{
+							"key": "idProduct",
+							"value": "635a95662453d21201e3ce3c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE_CREDIT ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/credit/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"credit",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "03faa714-5c22-472e-b383-ed7331f564f8",
+		"name": "B37_BOOTCOIN_SERVICE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15770076"
+	},
+	"item": [
+		{
+			"name": "CREATE_BOOTCOIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numberDocument\":\"70150525\",\r\n    \"documentType\":\"DNI\",\r\n    \"phone\" :\"986434107\",\r\n    \"names\" :\"Alexander Bejarano\",\r\n    \"email\" :\"ales.bejarano@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/bootcoin/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"bootcoin",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE_BOOTCOIN TWO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numberDocument\":\"70150525\",\r\n    \"documentType\":\"DNI\",\r\n    \"phone\" :\"934819535\",\r\n    \"names\" :\"Angel\",\r\n    \"email\" : \"Angel@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/bootcoin/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"bootcoin",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/bootcoin/get/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"bootcoin",
+						"get",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BY PHONE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bootcoin/get/986434107s",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bootcoin",
+						"get",
+						"986434107s"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generateMovements",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bootcoinId\": \"63696d011b0b3c7e467a44d5\",\r\n  \"phone\" :\"986434107\",\r\n  \"description\":\"Ingreso\",\r\n  \"amount\": \"500\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/bootcoin/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"bootcoin",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

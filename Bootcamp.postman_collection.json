@@ -1,0 +1,1064 @@
+{
+	"info": {
+		"_postman_id": "556de1fb-dcb0-45e2-a794-7f9efeb05233",
+		"name": "Bootcamp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2844677"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Create product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"008\",\r\n    \"name\": \"Cuenta de ahorro vip\",\r\n    \"maintenance\": 0.0,\r\n    \"maxMovements\": 5,\r\n    \"maxNumberCredits\": 0,\r\n    \"commissionAmount\": 10,\r\n    \"openingAmount\": 10,\r\n    \"minFixedAmount\": 10,\r\n    \"category\": \"ACTIVE\",\r\n    \"productTypeId\": \"SAVINGS_ACCOUNT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/product/get/63596b0a930baa51326a0b4a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"product",
+								"get",
+								"63596b0a930baa51326a0b4a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"code\": \"003\",\r\n        \"name\": \"Cuenta plazo fijo\",\r\n        \"maintenance\": 0.0,\r\n        \"maxMovements\": 1,\r\n        \"maxNumberCredits\": 0,\r\n        \"commissionAmount\": 20,\r\n        \"openingAmount\": 0.0,\r\n        \"minFixedAmount\": 0.0,\r\n        \"category\": \"PASSIVE\",\r\n        \"productTypeId\": \"FIXED_TERM_ACCOUNT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/6359da0ce2e7572b4c0be559",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"6359da0ce2e7572b4c0be559"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/product/6349a3609e7def6b070f4bb0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product",
+								"6349a3609e7def6b070f4bb0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/product/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"product",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "Create customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"typeCustomer\": \"PERSONAL\",\r\n    \"name\": \"Joel\",\r\n    \"lastName\": \"Alvarado\",\r\n    \"emailAddress\": \"joel@gmail.com\",\r\n    \"numberDocument\": \"46752877\",\r\n    \"typeProfile\": \"VIP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All customers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/customer/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"customer",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/customer/get/6359ea9480b99b212dbf0b41",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"customer",
+								"get",
+								"6359ea9480b99b212dbf0b41"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "Create Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": \"1123783469876888\",\r\n    \"balance\": \"400\",\r\n    \"coin\": \"PEN\",\r\n    \"holderId\": \"635a098080b99b212dbf0b42\",\r\n    \"state\": \"ACTIVE\",\r\n    \"typeAccount\": \"SAVINGS_ACCOUNT\",\r\n    \"productId\": \"63596a9a3e79080adc09ae4a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/account/1123783469876888",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"account",
+								"1123783469876888"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transactions account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/account/transaction/635d932e78c010752c3e9f7d/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account",
+								"transaction",
+								"635d932e78c010752c3e9f7d",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deposit Current Account",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 2000,\r\n    \"targetAccount\": \"1023783469876736\",\r\n    \"operation\": \"Deposito a cuenta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/account/transaction/deposit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account",
+								"transaction",
+								"deposit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account withdraw",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 1100,\r\n    \"accountNumber\": \"1023783469876736\",\r\n    \"operation\": \"Retiro de agente\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/account/transaction/withdraw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account",
+								"transaction",
+								"withdraw"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wire transfer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 1000,\r\n    \"sourceAccount\": \"1267783469876735\",\r\n    \"targetAccount\": \"1123783469876888\",\r\n    \"operation\": \"Transaferencia bancaria\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/account/transaction/transfer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account",
+								"transaction",
+								"transfer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Credits",
+			"item": [
+				{
+					"name": "Create card credit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCustomer\": \"635a098080b99b212dbf0b42\",\r\n    \"idProduct\": \"6359db1ce2e7572b4c0be55c\",\r\n    \"limitAmount\": 1000,\r\n    \"status\": \"Active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/credit/card",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"credit",
+								"card"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Card",
+			"item": [
+				{
+					"name": "Register card",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": \"44258945454535\",\r\n    \"expirationDate\": \"2025-10-29\",\r\n    \"cvv\": \"123\",\r\n    \"cardType\": \"VISA\",\r\n    \"holderId\": \"6359e98680b99b212dbf0b40\",\r\n    \"accounts\": [{\r\n        \"accountNumber\": \"1123783469876722\",\r\n        \"isDefault\": true,\r\n        \"order\": 1\r\n    }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/card/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"card",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attach Account",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": \"1023783467346736\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/card/account/636044bbb124c33d0f24bdc9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"card",
+								"account",
+								"636044bbb124c33d0f24bdc9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get balance main account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/card/account/balance/44258945454535",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"card",
+								"account",
+								"balance",
+								"44258945454535"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Card movements",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/card/636044bbb124c33d0f24bdc9/movements",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"card",
+								"636044bbb124c33d0f24bdc9",
+								"movements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Card withdraw",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cardNumber\": \"44258945454535\",\r\n    \"amount\": 1000,\r\n    \"detail\": \"Retiro dinero\",\r\n    \"entity\": \"cajero\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/card/transaction/withdraw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"card",
+								"transaction",
+								"withdraw"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Wallet",
+			"item": [
+				{
+					"name": "transactions wallet",
+					"item": [
+						{
+							"name": "Transferir",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sourceNumberCell\": \"98785296\",\r\n    \"targetNumberCell\": \"98785555\",\r\n    \"amount\": 20\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/wallet-transfer/exec",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"wallet-transfer",
+										"exec"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Last transaction",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/wallet-transfer/last/63643b7a1578963bcd97a1bc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"wallet-transfer",
+										"last",
+										"63643b7a1578963bcd97a1bc"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create wallet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\": \"984963582\",\r\n    \"name\": \"Angel\",\r\n    \"balance\": 400,\r\n    \"lastName\": \"Alvarado\",\r\n    \"numberDocument\": \"45789636\",\r\n    \"documentType\": \"DNI\",\r\n    \"imei\": \"457968524857890235\",\r\n    \"email\": \"angeljoel.1218@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/wallet/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"wallet",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Wallet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/wallet/get/984963444",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"wallet",
+								"get",
+								"984963444"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bootcoin",
+			"item": [
+				{
+					"name": "Ad",
+					"item": [
+						{
+							"name": "Ad post",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nickname\": \"thechange\",\r\n    \"amount\": 100,\r\n    \"methodPayment\": \"YANKI-PAYMENT-ID\",\r\n    \"maxAmount\": 50,\r\n    \"minAmount\": 100,\r\n    \"walletId\": \"636861ac10c55a021df589aa\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/ad/post",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"ad",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Request purchase",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"advertId\": \"63686af7d3ce8d53ba1f98ac\",\r\n    \"amount\": 100,\r\n    \"methodPayment\": \"TRANSFER-PAYMENT-ID\",\r\n    \"buyerWalletId\": \"636861e610c55a021df589ab\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/ad/request-purchase",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"ad",
+										"request-purchase"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Master Data",
+					"item": [
+						{
+							"name": "Create exchange rate",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"currency\": \"BTC\",\r\n    \"price\": 5.980,\r\n    \"refCurrency\": \"PEN\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8091/data-bootcoin/exchange-rate/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8091",
+									"path": [
+										"data-bootcoin",
+										"exchange-rate",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update exchange rate",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"currency\": \"BTC\",\r\n    \"price\": 7.980,\r\n    \"refCurrency\": \"PEN\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8091/data-bootcoin/exchange-rate/89f1a97f-ec31-453e-a40f-af0d9f6d1142",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8091",
+									"path": [
+										"data-bootcoin",
+										"exchange-rate",
+										"89f1a97f-ec31-453e-a40f-af0d9f6d1142"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Exchange rate",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/data-bootcoin/exchange-rate/89f1a97f-ec31-453e-a40f-af0d9f6d1142",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"data-bootcoin",
+										"exchange-rate",
+										"89f1a97f-ec31-453e-a40f-af0d9f6d1142"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create method payment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"YANKI-PAYMENT-ID\",\r\n    \"value\": \"Pagar con yanki\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/data-bootcoin/method-payment/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"data-bootcoin",
+										"method-payment",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update method payment",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"value\": \"Pagar con Yanki\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/data-bootcoin/method-payment/YANKI-PAYMENT-ID",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"data-bootcoin",
+										"method-payment",
+										"YANKI-PAYMENT-ID"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get method payment",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7000/data-bootcoin/method-payment/YANKI-PAYMENT-ID",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"data-bootcoin",
+										"method-payment",
+										"YANKI-PAYMENT-ID"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Exchange",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7000/data-bootcoin/exchange-rate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"data-bootcoin",
+										"exchange-rate"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Exchange",
+					"item": [
+						{
+							"name": "Config method payment",
+							"item": [
+								{
+									"name": "Add method payment",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"methodPaymentId\":\"YANKI-PAYMENT-ID\",\r\n    \"numberCellPhone\": \"984963444\",\r\n    \"walletId\": \"636861e610c55a021df589ab\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:7000/exchange/config-payment",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7000",
+											"path": [
+												"exchange",
+												"config-payment"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Payment Config",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/exchange/config-payment/636805aacbb47d7e79745ebe",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"exchange",
+												"config-payment",
+												"636805aacbb47d7e79745ebe"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Transaction exchange",
+							"item": [
+								{
+									"name": "Request Accept exchange bootcoin",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:7000/exchange/transaction/accept/636979cdd23cc676e2e1d6b9",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7000",
+											"path": [
+												"exchange",
+												"transaction",
+												"accept",
+												"636979cdd23cc676e2e1d6b9"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Wallet bootcoin",
+					"item": [
+						{
+							"name": "Create wallet",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"numberDocument\": \"45789012\",\r\n    \"documentType\": \"DNI\",\r\n    \"phone\": \"984963444\",\r\n    \"names\": \"Alexander bejar\",\r\n    \"balance\":  500,\r\n    \"email\": \"alexander@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/bootcoin/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"bootcoin",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Wallet all",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7000/bootcoin/get/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"bootcoin",
+										"get",
+										"all"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
